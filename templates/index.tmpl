@@ -1,0 +1,27 @@
+<head>
+	<link rel="stylesheet" href="/css/index.css">
+	<script defer src="/js/index.js"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300&family=Lora&family=Montserrat:wght@800&display=swap" rel="stylesheet">
+
+</head>
+<div class="content">
+	<h1 class="page-title">
+		{{ .title }}
+	</h1>
+	<h2 class="page-subtitle">
+		{{ .Subtitle }}
+	</h12>
+	<h2 class="page-body">
+		{{ .Body }}
+	</h2>
+	<ul>
+		{{ range .albums}}
+		{{ template "album" .}}
+		{{ else }} <div><strong>no rows</strong></div>
+		{{ end }}
+	</ul>
+</div>

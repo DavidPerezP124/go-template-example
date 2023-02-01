@@ -1,0 +1,20 @@
+{{define "album"}}
+<div class="music-player-container">
+	<div class="album-container">
+		<div class="album">
+			<div class="album-art" style="background: url({{.Poster}}) center / cover no-repeat" ></div>
+			<div class="vinyl" style="background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/83141/vinyl.png'), url('{{.Poster}}')"></div>
+			<audio class="audio-player" src="{{ .Sample }}">
+		</div>
+	</div>
+	<div class="info-container">
+		<p>
+			<span class="info title" id="album-title-{{.Title}}"> title: {{.Title}} </span>
+			</br>
+			<span class="info artist" id="album-artist-{{.Artist}}"> artist: {{.Artist}} </span>
+			</br>
+			<span class="info price" id="album-cost-{{.Price}}"> price: {{.Price}} </span>
+		</p>
+	</div>
+</div>
+{{end}}

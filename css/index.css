@@ -1,0 +1,94 @@
+
+.album {
+	box-shadow: 3px 3px 15px rgba(0,0,0,0.65);
+	height: 315px;
+	position: relative;
+	width: 315px;
+	z-index: 10;
+}
+
+.album-art {
+	height: 315px;
+	position: relative;
+	width: 315px;
+	z-index: 10;
+}
+
+.album-container {
+	flex: 1;
+}
+
+.content {
+	margin: auto;
+	width:50%
+}
+
+.info-container {
+	flex: 1;
+}
+
+.info {
+	font-family: 'Hind Madurai', sans-serif;
+}
+
+.info.title {
+	font-size: large;
+}
+
+.music-player-container {
+	display: flex;
+	position: relative;
+ 	max-width: 100%;
+	padding: 2em;
+}
+
+.music-player-container.is-playing div.vinyl {
+	animation-name: spin;
+  	animation-duration: 5000ms;
+  	animation-iteration-count: infinite;
+  	animation-timing-function: linear; 
+	-webkit-transition:1s;
+    -moz-transition:1s;
+    left:52%
+}
+
+.page-title {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 4em;
+	padding-top: 2em;
+	padding-bottom: 1em;
+}
+
+.page-subtitle {
+	font-family: 'Lora', serif;
+}
+
+.page-body {
+	font-family: 'Lora', serif;
+} 
+
+.vinyl {
+	-webkit-transition:1s;
+    -moz-transition:1s;
+	background-position: center, center;
+	background-size: cover, 40% auto;
+	background-repeat: no-repeat;
+	border-radius: 100%;
+	box-shadow: 0 0 10px rgba(0,0,0,0.8);
+	height: 300px;
+	left: 0;
+	position: absolute;
+	top: 5px;
+	width: 300px;
+	z-index: 5;
+	will-change: transform, left;
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
